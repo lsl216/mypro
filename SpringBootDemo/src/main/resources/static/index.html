@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="external nofollow" target="_blank"  rel="external nofollow" target="_blank" >
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js" rel="external nofollow"  rel="external nofollow" ></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js" rel="external nofollow" ></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" rel="external nofollow"  rel="external nofollow" ></script>
+    <title>W3Cschool(w3cschool.cn)</title>
+</head>
+<body>
+<select class="combobox">
+</select>
+<script type="text/javascript">
+    $(function () {
+       $.get("getProvince",function (res) {
+           var item = '<option>请选择省份</option>';
+           for(var p in res){
+               item+='<option value="'+p+'">'+res[p]+'</option>';
+           }
+           $(".combobox").html(item);
+       })
+    });
+</script>
+</body>
+</html>
